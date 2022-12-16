@@ -1,6 +1,6 @@
 import React from "react";
 
-function ListItem({ item, clickItem }) {
+function ListItem({ item, clickItem, showQuantities }) {
     return (
         <li
             key={item.id}
@@ -9,9 +9,9 @@ function ListItem({ item, clickItem }) {
             value={item.title}
         >
             {item.title}
+            {showQuantities && <li>amount: {item.amount}</li>}
         </li>
     )
 }
-
 
 export default ListItem;
